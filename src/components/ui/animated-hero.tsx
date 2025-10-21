@@ -31,6 +31,9 @@ function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex gap-8 py-20 lg:py-32 items-center justify-center flex-col">
           <div className="flex gap-4 flex-col max-w-4xl">
+            <p className="text-lg md:text-xl text-muted-foreground font-medium tracking-wide text-center">
+              [Your Name]
+            </p>
             <h1 className="text-5xl md:text-7xl lg:text-8xl max-w-4xl tracking-tight text-center font-display font-bold">
               <span className="text-foreground">Aspiring</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">

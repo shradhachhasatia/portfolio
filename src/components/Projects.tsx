@@ -14,10 +14,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Project Title 1",
-    description: "Brief description of the project and key outcomes achieved.",
-    category: "Digital Transformation",
-    caseStudy: "Detailed case study content here. Describe the challenge, approach, methodology, and results. Include metrics and key learnings from the project.",
+    title: "Lockbook",
+    description: "Managed end-to-end development of a secure fintech application for financial data management.",
+    category: "Fintech",
+    caseStudy: "Led the product management and development lifecycle for Lockbook, a fintech application focused on secure financial data management. Coordinated cross-functional teams including engineering, design, and compliance to ensure regulatory adherence and user-centric design. Successfully launched MVP and achieved strong user adoption metrics with a 4.5/5 user rating.",
     imageUrl: "/placeholder.svg",
   },
   {

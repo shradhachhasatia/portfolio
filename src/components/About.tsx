@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle2 } from "lucide-react";
-import profilePlaceholder from "@/assets/profile-placeholder.png";
+import profilePlaceholder from "@/assets/profile-placeholder.jpg";
 
 const About = () => {
   const strengths = [
@@ -22,7 +22,7 @@ const About = () => {
             {/* Photo Section - Lowkey */}
             <div className="flex justify-center md:justify-start">
               <div className="relative group">
-                <div className="w-64 h-64 rounded-2xl overflow-hidden border-2 border-border bg-muted">
+                <div className="w-64 h-64 rounded-full overflow-hidden border-2 border-border bg-muted">
                   <img 
                     src={profilePlaceholder} 
                     alt="Profile" 

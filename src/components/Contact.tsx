@@ -88,31 +88,37 @@ const Contact = () => {
                 Send Message
               </Button>
             </form>
-            
-            <div className="mt-8 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground text-center mb-4">Or connect with me</p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  onClick={handleDownloadResume}
-                  variant="outline"
-                  size="lg"
-                  className="flex-1 gap-2 font-medium border-2 hover:border-primary hover:bg-primary/5 transition-all h-12"
-                >
-                  <Download className="w-4 h-4" />
-                  Download Resume
-                </Button>
-                <Button
-                  onClick={handleLinkedIn}
-                  variant="outline"
-                  size="lg"
-                  className="gap-2 font-medium border-2 hover:border-primary hover:bg-primary/5 transition-all h-12 sm:w-auto"
-                >
-                  <Linkedin className="w-5 h-5" />
-                  LinkedIn Profile
-                </Button>
-              </div>
-            </div>
           </Card>
+          
+          {/* Additional Info Section */}
+          <div className="mt-8 space-y-6">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                onClick={handleDownloadResume}
+                variant="ghost"
+                size="sm"
+                className="gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
+              </Button>
+              <Button
+                onClick={handleLinkedIn}
+                variant="ghost"
+                size="sm"
+                className="gap-2 text-muted-foreground hover:text-foreground"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn Profile
+              </Button>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground">
+                Response time: <span className="font-medium text-foreground">Within 24 hours</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
