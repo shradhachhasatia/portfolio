@@ -1,7 +1,7 @@
 import { Timeline } from "@/components/ui/timeline";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Briefcase } from "lucide-react";
+import excelerateLogo from "@/assets/excelerate-logo.png";
 
 const Experience = () => {
   const data = [
@@ -12,8 +12,12 @@ const Experience = () => {
           {/* Associate Project Management Intern */}
           <Card className="p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-start gap-6">
-              <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center flex-shrink-0 border-2 border-border">
-                <Briefcase className="w-10 h-10 text-primary" />
+              <div className="w-20 h-20 rounded-xl bg-background border-2 border-border flex items-center justify-center flex-shrink-0 p-2">
+                <img 
+                  src={excelerateLogo} 
+                  alt="Excelerate" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex-1 space-y-4">
                 <div>
@@ -54,9 +58,14 @@ const Experience = () => {
                   <Badge variant="secondary">Risk Management</Badge>
                 </div>
 
-                {/* Placeholder for experience image */}
-                <div className="mt-6 w-full h-48 bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-                  <p className="text-muted-foreground text-sm">Experience Image Placeholder</p>
+                {/* Image Placeholders */}
+                <div className="mt-6 grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
+                    <p className="text-center text-muted-foreground text-sm px-4">Associate PM Intern - Image 1</p>
+                  </div>
+                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
+                    <p className="text-center text-muted-foreground text-sm px-4">Associate PM Intern - Image 2</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,8 +74,12 @@ const Experience = () => {
           {/* Project Management Trainee */}
           <Card className="p-8 shadow-lg hover:shadow-xl transition-shadow">
             <div className="flex items-start gap-6">
-              <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center flex-shrink-0 border-2 border-border">
-                <Briefcase className="w-10 h-10 text-primary" />
+              <div className="w-20 h-20 rounded-xl bg-background border-2 border-border flex items-center justify-center flex-shrink-0 p-2">
+                <img 
+                  src={excelerateLogo} 
+                  alt="Excelerate" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex-1 space-y-4">
                 <div>
@@ -107,9 +120,14 @@ const Experience = () => {
                   <Badge variant="secondary">Team Collaboration</Badge>
                 </div>
 
-                {/* Placeholder for experience image */}
-                <div className="mt-6 w-full h-48 bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-                  <p className="text-muted-foreground text-sm">Experience Image Placeholder</p>
+                {/* Image Placeholders */}
+                <div className="mt-6 grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
+                    <p className="text-center text-muted-foreground text-sm px-4">Project Management Trainee - Image 1</p>
+                  </div>
+                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border">
+                    <p className="text-center text-muted-foreground text-sm px-4">Project Management Trainee - Image 2</p>
+                  </div>
                 </div>
               </div>
             </div>

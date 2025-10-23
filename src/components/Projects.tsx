@@ -43,98 +43,70 @@ const Projects = () => {
       }
     },
     {
-      name: "E-Commerce Platform",
-      Icon: Briefcase,
-      description: "Full-featured e-commerce solution with product management, secure checkout, and order tracking.",
-      href: "#",
-      cta: "View Case Study",
-      background: <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
-      caseStudy: {
-        overview: "Led the development of a modern e-commerce platform from concept to launch, focusing on user experience and conversion optimization.",
-        role: "Project Manager",
-        duration: "8 months",
-        team: "12 members",
-        challenges: [
-          "Coordinating multiple vendor integrations",
-          "Optimizing site performance for mobile users",
-          "Managing inventory across multiple warehouses"
-        ],
-        outcomes: [
-          "300% increase in online sales within 6 months",
-          "Reduced cart abandonment by 35%",
-          "Improved page load times by 50%"
-        ],
-        technologies: ["Next.js", "Shopify", "Stripe", "Redis"],
-        images: [
-          { placeholder: "Product Catalog - Enhanced Shopping Experience" },
-          { placeholder: "Checkout Flow - Streamlined Payment Process" },
-          { placeholder: "Admin Dashboard - Inventory Management" },
-          { placeholder: "Analytics - Sales Performance Metrics" }
-        ]
-      }
-    },
-    {
-      name: "Task Management",
-      Icon: Code2,
-      description: "Collaborative task tracking tool with real-time updates and analytics dashboard.",
+      name: "Carbon Footprint Dashboard",
+      Icon: BarChart3,
+      description: "Framework to track and reduce remote team carbon emissions from home offices, travel, and digital infrastructure.",
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
       caseStudy: {
-        overview: "Developed and launched a comprehensive task management solution for remote teams, enabling seamless collaboration and productivity tracking.",
+        overview: "Developed a comprehensive framework to track and reduce carbon emissions for remote teams, covering home offices, travel, and digital infrastructure while delivering measurable sustainability improvements.",
         role: "Project Manager",
         duration: "5 months",
-        team: "6 members",
+        team: "7 members",
         challenges: [
-          "Real-time synchronization across devices",
-          "Intuitive UI for complex project hierarchies",
-          "Integration with existing tools"
+          "Establishing accurate carbon tracking metrics for distributed teams",
+          "Engaging stakeholders across departments in sustainability initiatives",
+          "Creating intuitive data visualizations for complex environmental data",
+          "Driving behavioral change management in remote work environments"
         ],
         outcomes: [
-          "5,000+ teams using the platform",
-          "40% improvement in team productivity",
-          "Featured in top productivity tools list"
+          "Achieved 20% reduction in team carbon footprint within first year",
+          "Developed adoption framework implemented across 5 departments",
+          "Delivered comprehensive ROI analysis showing cost savings",
+          "Recognition as sustainability leader in remote work practices"
         ],
-        technologies: ["React", "Firebase", "WebSockets", "Material-UI"],
+        technologies: ["Power BI", "Python", "Excel", "Carbon Tracking APIs"],
         images: [
-          { placeholder: "Kanban Board - Visual Task Organization" },
-          { placeholder: "Team Collaboration - Real-time Updates" },
-          { placeholder: "Analytics Dashboard - Productivity Insights" },
-          { placeholder: "Mobile App - On-the-go Task Management" }
+          { placeholder: "Carbon Dashboard - Real-time Emissions Tracking" },
+          { placeholder: "Team Analytics - Department Comparison View" },
+          { placeholder: "Reduction Strategies - Action Plan Interface" },
+          { placeholder: "ROI Analysis - Financial Impact Report" }
         ]
       }
     },
     {
-      name: "Analytics Dashboard",
-      Icon: BarChart3,
-      description: "Real-time data visualization and monitoring platform with interactive charts and reports.",
+      name: "AI Ethics Compliance",
+      Icon: Code2,
+      description: "Governance framework for responsible AI use in product development with bias testing and transparency protocols.",
       href: "#",
       cta: "View Case Study",
-      background: <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20" />,
-      className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-4",
+      background: <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20" />,
+      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
       caseStudy: {
-        overview: "Created an enterprise-grade analytics platform for data-driven decision making, featuring customizable dashboards and automated reporting.",
+        overview: "Created a comprehensive governance framework for responsible AI use in product development, establishing ethical guidelines, bias testing protocols, and transparency standards.",
         role: "Project Manager",
-        duration: "7 months",
-        team: "10 members",
+        duration: "4 months",
+        team: "9 members",
         challenges: [
-          "Processing large datasets in real-time",
-          "Creating intuitive data visualizations",
-          "Ensuring data security and privacy"
+          "Managing complex regulatory compliance across multiple jurisdictions",
+          "Creating comprehensive documentation for ethical AI frameworks",
+          "Facilitating cross-functional collaboration between tech and legal teams",
+          "Balancing innovation speed with ethical considerations"
         ],
         outcomes: [
-          "Reduced reporting time by 70%",
-          "Enabled data-driven decisions for 50+ departments",
-          "Won best analytics tool award"
+          "Published comprehensive ethics playbook adopted company-wide",
+          "Implemented bias testing checklist used in all AI projects",
+          "Delivered training materials to 200+ employees",
+          "Established industry benchmark for AI ethics compliance"
         ],
-        technologies: ["Vue.js", "D3.js", "Python", "MongoDB", "Apache Kafka"],
+        technologies: ["Python", "TensorFlow", "Fairness Indicators", "Confluence"],
         images: [
-          { placeholder: "Main Dashboard - Real-time Metrics Overview" },
-          { placeholder: "Custom Reports - Automated Data Analysis" },
-          { placeholder: "Data Visualization - Interactive Charts" },
-          { placeholder: "Admin Panel - User Management & Permissions" }
+          { placeholder: "Ethics Framework - Governance Structure" },
+          { placeholder: "Bias Testing - Automated Checklist Interface" },
+          { placeholder: "Training Dashboard - Employee Progress Tracking" },
+          { placeholder: "Compliance Report - Audit Trail System" }
         ]
       }
     },
@@ -151,7 +123,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A showcase of my recent work in fintech, web development, and data visualization
+            A showcase of my recent work in fintech, sustainability, and tech ethics
           </p>
         </div>
 

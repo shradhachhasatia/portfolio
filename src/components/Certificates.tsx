@@ -4,35 +4,50 @@ import { Badge } from "@/components/ui/badge";
 import linkedinLogo from "@/assets/linkedin-learning-logo.png";
 import oxfordLogo from "@/assets/oxford-logo.png";
 import forageLogo from "@/assets/forage-logo.png";
+import actitimeLogo from "@/assets/actitime-logo.png";
 
 const certificates = [
   {
     title: "Project Management: Technical Projects",
     issuer: "LinkedIn Learning",
     logo: linkedinLogo,
-    date: "2024",
+    date: "2025",
     skills: ["Technical PM", "Agile", "Stakeholder Management"],
   },
   {
-    title: "CBRE PM Job Simulation",
+    title: "CBRE - Project Management Job Simulation",
     issuer: "Forage",
     logo: forageLogo,
-    date: "2024",
+    date: "2025",
     skills: ["Real Estate PM", "Client Relations", "Project Delivery"],
+  },
+  {
+    title: "Siemens Mobility - Project Manager Job Simulation",
+    issuer: "Forage",
+    logo: forageLogo,
+    date: "2025",
+    skills: ["Mobility Solutions", "Stakeholder Management", "Project Execution"],
   },
   {
     title: "Mistakes to Avoid in Agile Project Management",
     issuer: "LinkedIn Learning",
     logo: linkedinLogo,
-    date: "2024",
+    date: "2025",
     skills: ["Agile Methodologies", "Risk Management", "Best Practices"],
   },
   {
     title: "Project Management Certificate",
-    issuer: "University of Oxford",
+    issuer: "Oxford Home Study Centre",
     logo: oxfordLogo,
-    date: "2023",
+    date: "2025",
     skills: ["Strategic Planning", "Leadership", "Program Management"],
+  },
+  {
+    title: "actiTIME Project Management Certificate",
+    issuer: "actiTIME",
+    logo: actitimeLogo,
+    date: "2025",
+    skills: ["Time Management", "Resource Planning", "Project Tracking"],
   },
 ];
 
