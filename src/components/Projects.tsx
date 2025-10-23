@@ -33,7 +33,7 @@ const Projects = () => {
           "Reduced transaction processing time by 40%",
           "Received 4.8/5 user satisfaction rating"
         ],
-        technologies: ["React", "Node.js", "PostgreSQL", "AWS", "Stripe API"],
+        skills: ["Agile Methodology", "Risk Management", "Stakeholder Communication", "Budget Management"],
         images: [
           { placeholder: "Dashboard Overview - Financial Management Interface" },
           { placeholder: "Transaction Processing - Real-time Analytics View" },
@@ -67,7 +67,7 @@ const Projects = () => {
           "Delivered comprehensive ROI analysis showing cost savings",
           "Recognition as sustainability leader in remote work practices"
         ],
-        technologies: ["Power BI", "Python", "Excel", "Carbon Tracking APIs"],
+        skills: ["Sustainability Metrics", "Stakeholder Engagement", "Data Visualization", "Change Management"],
         images: [
           { placeholder: "Carbon Dashboard - Real-time Emissions Tracking" },
           { placeholder: "Team Analytics - Department Comparison View" },
@@ -101,12 +101,76 @@ const Projects = () => {
           "Delivered training materials to 200+ employees",
           "Established industry benchmark for AI ethics compliance"
         ],
-        technologies: ["Python", "TensorFlow", "Fairness Indicators", "Confluence"],
+        skills: ["Risk Management", "Compliance Documentation", "Cross-functional Collaboration", "Ethical Frameworks"],
         images: [
           { placeholder: "Ethics Framework - Governance Structure" },
           { placeholder: "Bias Testing - Automated Checklist Interface" },
           { placeholder: "Training Dashboard - Employee Progress Tracking" },
           { placeholder: "Compliance Report - Audit Trail System" }
+        ]
+      }
+    },
+    {
+      name: "CBRE Project Management",
+      Icon: Briefcase,
+      description: "Real estate project management simulation focused on client relations and project delivery excellence.",
+      href: "#",
+      cta: "View Case Study",
+      background: <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20" />,
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
+      caseStudy: {
+        overview: "Led comprehensive project management simulation for CBRE, focusing on real estate portfolio management, client relationship building, and strategic project delivery in commercial property sector.",
+        role: "Project Manager",
+        duration: "3 months",
+        team: "6 members",
+        challenges: [
+          "Managing multiple stakeholder expectations across property portfolio",
+          "Coordinating complex timeline dependencies for property development",
+          "Balancing budget constraints with quality standards",
+          "Adapting to dynamic market conditions and client requirements"
+        ],
+        outcomes: [
+          "Successfully delivered project simulation with 95% client satisfaction",
+          "Developed stakeholder communication framework adopted by team",
+          "Implemented risk mitigation strategies reducing delays by 30%",
+          "Created reusable project templates for future engagements"
+        ],
+        skills: ["Real Estate PM", "Client Relations", "Project Delivery", "Portfolio Management"],
+        images: [
+          { placeholder: "Project Timeline - Gantt Chart View" },
+          { placeholder: "Stakeholder Dashboard - Communication Matrix" }
+        ]
+      }
+    },
+    {
+      name: "Siemens Mobility Solutions",
+      Icon: Code2,
+      description: "Transportation infrastructure project management with focus on stakeholder coordination and execution.",
+      href: "#",
+      cta: "View Case Study",
+      background: <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20" />,
+      className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4",
+      caseStudy: {
+        overview: "Managed simulation project for Siemens Mobility focusing on modern transportation solutions, infrastructure planning, and multi-stakeholder coordination for sustainable mobility initiatives.",
+        role: "Project Manager",
+        duration: "4 months",
+        team: "8 members",
+        challenges: [
+          "Coordinating across multiple technical and non-technical stakeholders",
+          "Managing complex regulatory and safety compliance requirements",
+          "Integrating legacy systems with modern mobility solutions",
+          "Ensuring project alignment with sustainability goals"
+        ],
+        outcomes: [
+          "Delivered comprehensive project plan with 98% milestone achievement",
+          "Established stakeholder engagement framework for mobility projects",
+          "Created risk assessment methodology adopted across projects",
+          "Received commendation for sustainability integration approach"
+        ],
+        skills: ["Mobility Solutions", "Stakeholder Management", "Project Execution", "Sustainability Planning"],
+        images: [
+          { placeholder: "Mobility Infrastructure - System Architecture" },
+          { placeholder: "Stakeholder Map - Engagement Strategy" }
         ]
       }
     },
@@ -208,13 +272,13 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Technologies */}
+                  {/* Project Management Skills */}
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Technologies Used</h3>
+                    <h3 className="text-xl font-bold mb-4">Project Management Skills</h3>
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.caseStudy.technologies.map((tech: string) => (
-                        <Badge key={tech} variant="secondary" className="text-base px-4 py-2">
-                          {tech}
+                      {selectedProject.caseStudy.skills.map((skill: string) => (
+                        <Badge key={skill} variant="secondary" className="text-base px-4 py-2">
+                          {skill}
                         </Badge>
                       ))}
                     </div>
