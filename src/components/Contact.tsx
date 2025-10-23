@@ -31,26 +31,26 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 bg-muted/30 relative overflow-hidden">
       {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="text-center mb-10 md:mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3 md:mb-4">
             Get In Touch
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base md:text-lg px-4">
             Let's discuss how we can work together on your next project
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Contact Form - Left Side (2 columns) */}
           <div className="lg:col-span-2">
-            <Card className="p-8 md:p-10 shadow-2xl border-2 backdrop-blur-sm bg-background/95 h-full">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <Card className="p-6 md:p-8 lg:p-10 shadow-2xl border-2 backdrop-blur-sm bg-background/95 h-full">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-foreground/90">Name</label>
                   <Input
@@ -94,17 +94,17 @@ const Contact = () => {
           </div>
 
           {/* Resume & LinkedIn - Right Side (1 column) */}
-          <div className="lg:col-span-1 space-y-6">
-            <Card className="p-8 shadow-2xl border-2 backdrop-blur-sm bg-gradient-to-br from-primary/5 to-primary/10">
-              <div className="space-y-6">
+          <div className="lg:col-span-1 space-y-4 md:space-y-6">
+            <Card className="p-6 md:p-8 shadow-2xl border-2 backdrop-blur-sm bg-gradient-to-br from-primary/5 to-primary/10">
+              <div className="space-y-4 md:space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Let's Connect</h3>
+                  <h3 className="text-lg md:text-xl font-semibold mb-2">Let's Connect</h3>
                   <p className="text-sm text-muted-foreground">
                     Download my resume or connect on LinkedIn
                   </p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-2 md:space-y-3">
                   <Button
                     onClick={handleDownloadResume}
                     variant="default"

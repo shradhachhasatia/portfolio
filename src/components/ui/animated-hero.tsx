@@ -29,11 +29,11 @@ function Hero() {
   return (
     <div className="w-full min-h-screen flex items-center">
       <div className="container mx-auto px-4">
-        <div className="flex gap-8 py-20 lg:py-32 items-center justify-center flex-col">
-          <div className="flex gap-4 flex-col max-w-4xl">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl max-w-4xl tracking-tight text-center font-display font-semibold">
+        <div className="flex gap-6 md:gap-8 py-16 md:py-20 lg:py-32 items-center justify-center flex-col">
+          <div className="flex gap-3 md:gap-4 flex-col max-w-4xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl tracking-tight text-center font-display font-semibold leading-tight">
               <span className="text-foreground">Aspiring</span>
-              <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
+              <span className="relative flex w-full justify-center overflow-hidden text-center pb-2 pt-1 md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
@@ -60,12 +60,12 @@ function Hero() {
               <span className="text-foreground">Project Manager</span>
             </h2>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center mx-auto font-light">
+            <p className="text-base md:text-lg lg:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center mx-auto font-light px-4">
               Dedicated to delivering exceptional results through strategic planning, 
               effective communication, and meticulous attention to detail.
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto px-4">
             <Button 
               size="lg" 
               className="gap-2 font-medium" 

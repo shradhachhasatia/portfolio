@@ -177,21 +177,21 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+    <section id="projects" className="py-16 md:py-24 bg-background relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-primary/5 rounded-full blur-3xl -z-10"></div>
       
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-3 md:mb-4">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto px-4">
             A showcase of my recent work in fintech, sustainability, and tech ethics
           </p>
         </div>
 
-        <BentoGrid className="lg:grid-rows-3 max-w-7xl mx-auto">
+        <BentoGrid className="lg:grid-rows-3 max-w-7xl mx-auto gap-4 md:gap-6">
           {projects.map((project) => (
             <div key={project.name} onClick={() => setSelectedProject(project)} className="cursor-pointer">
               <BentoCard {...project} />
@@ -201,46 +201,46 @@ const Projects = () => {
 
         {/* Case Study Dialog */}
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-          <DialogContent className="max-w-5xl max-h-[90vh] overflow-y-auto">
+          <DialogContent className="max-w-5xl max-h-[85vh] md:max-h-[90vh] overflow-y-auto p-4 md:p-6">
             {selectedProject && (
               <>
                 <DialogHeader>
-                  <DialogTitle className="text-3xl font-display font-bold flex items-center gap-3">
-                    <selectedProject.Icon className="w-8 h-8" />
-                    {selectedProject.name}
+                  <DialogTitle className="text-xl md:text-2xl lg:text-3xl font-display font-bold flex items-center gap-2 md:gap-3">
+                    <selectedProject.Icon className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" />
+                    <span className="leading-tight">{selectedProject.name}</span>
                   </DialogTitle>
-                  <DialogDescription className="text-base">
+                  <DialogDescription className="text-sm md:text-base">
                     {selectedProject.caseStudy.overview}
                   </DialogDescription>
                 </DialogHeader>
 
-                <div className="space-y-8 mt-6">
+                <div className="space-y-6 md:space-y-8 mt-4 md:mt-6">
                   {/* Project Details */}
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold text-muted-foreground uppercase">Role</p>
-                      <p className="text-lg font-medium">{selectedProject.caseStudy.role}</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+                    <div className="space-y-1 md:space-y-2">
+                      <p className="text-xs md:text-sm font-semibold text-muted-foreground uppercase">Role</p>
+                      <p className="text-base md:text-lg font-medium">{selectedProject.caseStudy.role}</p>
                     </div>
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold text-muted-foreground uppercase">Duration</p>
-                      <p className="text-lg font-medium">{selectedProject.caseStudy.duration}</p>
+                    <div className="space-y-1 md:space-y-2">
+                      <p className="text-xs md:text-sm font-semibold text-muted-foreground uppercase">Duration</p>
+                      <p className="text-base md:text-lg font-medium">{selectedProject.caseStudy.duration}</p>
                     </div>
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold text-muted-foreground uppercase">Team Size</p>
-                      <p className="text-lg font-medium">{selectedProject.caseStudy.team}</p>
+                    <div className="space-y-1 md:space-y-2">
+                      <p className="text-xs md:text-sm font-semibold text-muted-foreground uppercase">Team Size</p>
+                      <p className="text-base md:text-lg font-medium">{selectedProject.caseStudy.team}</p>
                     </div>
                   </div>
 
                   {/* Images Grid */}
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Project Showcase</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Project Showcase</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                       {selectedProject.caseStudy.images.map((img: any, idx: number) => (
                         <div 
                           key={idx}
-                          className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-6"
+                          className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-3 md:p-6"
                         >
-                          <p className="text-center text-muted-foreground">{img.placeholder}</p>
+                          <p className="text-center text-muted-foreground text-xs md:text-sm">{img.placeholder}</p>
                         </div>
                       ))}
                     </div>
@@ -248,12 +248,12 @@ const Projects = () => {
 
                   {/* Challenges */}
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Key Challenges</h3>
-                    <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Key Challenges</h3>
+                    <div className="space-y-2 md:space-y-3">
                       {selectedProject.caseStudy.challenges.map((challenge: string, idx: number) => (
-                        <div key={idx} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
-                          <span className="text-primary mt-1 text-lg">•</span>
-                          <p className="text-foreground/90">{challenge}</p>
+                        <div key={idx} className="flex items-start gap-2 md:gap-3 p-3 md:p-4 bg-muted/30 rounded-lg">
+                          <span className="text-primary mt-0.5 md:mt-1 text-base md:text-lg flex-shrink-0">•</span>
+                          <p className="text-sm md:text-base text-foreground/90">{challenge}</p>
                         </div>
                       ))}
                     </div>
@@ -261,12 +261,12 @@ const Projects = () => {
 
                   {/* Outcomes */}
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Outcomes & Impact</h3>
-                    <div className="space-y-3">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Outcomes & Impact</h3>
+                    <div className="space-y-2 md:space-y-3">
                       {selectedProject.caseStudy.outcomes.map((outcome: string, idx: number) => (
-                        <div key={idx} className="flex items-start gap-3 p-4 bg-primary/5 rounded-lg border border-primary/20">
-                          <span className="text-primary mt-1 text-lg">✓</span>
-                          <p className="text-foreground/90 font-medium">{outcome}</p>
+                        <div key={idx} className="flex items-start gap-2 md:gap-3 p-3 md:p-4 bg-primary/5 rounded-lg border border-primary/20">
+                          <span className="text-primary mt-0.5 md:mt-1 text-base md:text-lg flex-shrink-0">✓</span>
+                          <p className="text-sm md:text-base text-foreground/90 font-medium">{outcome}</p>
                         </div>
                       ))}
                     </div>
@@ -274,10 +274,10 @@ const Projects = () => {
 
                   {/* Project Management Skills */}
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Project Management Skills</h3>
-                    <div className="flex flex-wrap gap-2">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Project Management Skills</h3>
+                    <div className="flex flex-wrap gap-1.5 md:gap-2">
                       {selectedProject.caseStudy.skills.map((skill: string) => (
-                        <Badge key={skill} variant="secondary" className="text-base px-4 py-2">
+                        <Badge key={skill} variant="secondary" className="text-xs md:text-sm px-2 md:px-4 py-1 md:py-2">
                           {skill}
                         </Badge>
                       ))}
