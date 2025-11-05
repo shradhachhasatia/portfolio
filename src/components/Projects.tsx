@@ -15,7 +15,6 @@ const Projects = () => {
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20" />,
-      className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
       caseStudy: {
         overview: "Lockbook is a comprehensive fintech solution designed to streamline financial management for small businesses and individuals. The project involved managing a cross-functional team to deliver a secure, scalable platform.",
         role: "Project Manager",
@@ -49,7 +48,6 @@ const Projects = () => {
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
       caseStudy: {
         overview: "Developed a comprehensive framework to track and reduce carbon emissions for remote teams, covering home offices, travel, and digital infrastructure while delivering measurable sustainability improvements.",
         role: "Project Manager",
@@ -83,7 +81,6 @@ const Projects = () => {
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20" />,
-      className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
       caseStudy: {
         overview: "Created a comprehensive governance framework for responsible AI use in product development, establishing ethical guidelines, bias testing protocols, and transparency standards.",
         role: "Project Manager",
@@ -117,7 +114,6 @@ const Projects = () => {
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20" />,
-      className: "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2",
       caseStudy: {
         overview: "Led comprehensive project management simulation for CBRE, focusing on real estate portfolio management, client relationship building, and strategic project delivery in commercial property sector.",
         role: "Project Manager",
@@ -149,7 +145,6 @@ const Projects = () => {
       href: "#",
       cta: "View Case Study",
       background: <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-cyan-500/20" />,
-      className: "lg:col-start-3 lg:col-end-4 lg:row-start-2 lg:row-end-4",
       caseStudy: {
         overview: "Managed simulation project for Siemens Mobility focusing on modern transportation solutions, infrastructure planning, and multi-stakeholder coordination for sustainable mobility initiatives.",
         role: "Project Manager",
@@ -191,13 +186,27 @@ const Projects = () => {
           </p>
         </div>
 
-        <BentoGrid className="lg:grid-rows-3 max-w-7xl mx-auto gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
           {projects.map((project) => (
-            <div key={project.name} onClick={() => setSelectedProject(project)} className="cursor-pointer">
-              <BentoCard {...project} />
+            <div 
+              key={project.name} 
+              onClick={() => setSelectedProject(project)} 
+              className="cursor-pointer group relative overflow-hidden rounded-xl border border-border bg-card p-6 hover:shadow-lg transition-all duration-300 hover:border-primary/50"
+            >
+              <div className="relative z-10">
+                <div className="mb-4 inline-flex p-3 rounded-lg bg-primary/10">
+                  <project.Icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{project.name}</h3>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                <span className="text-sm text-primary font-medium hover:underline">
+                  {project.cta} →
+                </span>
+              </div>
+              {project.background}
             </div>
           ))}
-        </BentoGrid>
+        </div>
 
         {/* Case Study Dialog */}
         <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>

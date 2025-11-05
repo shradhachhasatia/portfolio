@@ -57,16 +57,6 @@ const Experience = () => {
                   <Badge variant="secondary" className="text-xs">Agile/Scrum</Badge>
                   <Badge variant="secondary" className="text-xs">Risk Management</Badge>
                 </div>
-
-                {/* Image Placeholders */}
-                <div className="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-2">
-                    <p className="text-center text-muted-foreground text-xs md:text-sm">Associate PM Intern - Image 1</p>
-                  </div>
-                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-2">
-                    <p className="text-center text-muted-foreground text-xs md:text-sm">Associate PM Intern - Image 2</p>
-                  </div>
-                </div>
               </div>
             </div>
           </Card>
@@ -118,16 +108,6 @@ const Experience = () => {
                   <Badge variant="secondary" className="text-xs">Research & Analysis</Badge>
                   <Badge variant="secondary" className="text-xs">Documentation</Badge>
                   <Badge variant="secondary" className="text-xs">Team Collaboration</Badge>
-                </div>
-
-                {/* Image Placeholders */}
-                <div className="mt-4 md:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-2">
-                    <p className="text-center text-muted-foreground text-xs md:text-sm">Project Management Trainee - Image 1</p>
-                  </div>
-                  <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center border-2 border-dashed border-border p-2">
-                    <p className="text-center text-muted-foreground text-xs md:text-sm">Project Management Trainee - Image 2</p>
-                  </div>
                 </div>
               </div>
             </div>
