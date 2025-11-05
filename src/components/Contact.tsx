@@ -46,9 +46,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
-          {/* Contact Form - Left Side (2 columns) */}
-          <div className="lg:col-span-2">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* Contact Form - Left Side */}
+          <div className="md:col-span-1">
             <Card className="p-6 md:p-8 lg:p-10 shadow-2xl border-2 backdrop-blur-sm bg-background/95 h-full">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
@@ -93,8 +93,8 @@ const Contact = () => {
             </Card>
           </div>
 
-          {/* Resume & LinkedIn - Right Side (1 column) */}
-          <div className="lg:col-span-1 space-y-4 md:space-y-6">
+          {/* Resume & LinkedIn - Right Side */}
+          <div className="md:col-span-1 space-y-4 md:space-y-6">
             <Card className="p-6 md:p-8 shadow-2xl border-2 backdrop-blur-sm bg-gradient-to-br from-primary/5 to-primary/10">
               <div className="space-y-4 md:space-y-6">
                 <div>
@@ -129,7 +129,7 @@ const Contact = () => {
                 <div className="pt-4 border-t">
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-muted-foreground">Response time:</span>
-                    <span className="text-sm font-medium">Within 24 hours</span>
+                    <span className="text-sm font-medium">Within 48 hours</span>
                   </div>
                 </div>
               </div>

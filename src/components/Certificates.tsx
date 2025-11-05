@@ -5,6 +5,7 @@ import linkedinLogo from "@/assets/linkedin-learning-logo.png";
 import oxfordLogo from "@/assets/oxford-logo.png";
 import forageLogo from "@/assets/forage-logo.png";
 import actitimeLogo from "@/assets/actitime-logo.png";
+import atlassianLogo from "@/assets/atlassian-logo.png";
 
 const certificates = [
   {
@@ -29,11 +30,11 @@ const certificates = [
     skills: ["Mobility Solutions", "Stakeholder Management", "Project Execution"],
   },
   {
-    title: "Mistakes to Avoid in Agile Project Management",
-    issuer: "LinkedIn Learning",
-    logo: linkedinLogo,
+    title: "Agile Project Management",
+    issuer: "Atlassian",
+    logo: atlassianLogo,
     date: "2025",
-    skills: ["Agile Methodologies", "Risk Management", "Best Practices"],
+    skills: ["Agile Methodologies", "Scrum", "Jira"],
   },
   {
     title: "Project Management Certificate",
