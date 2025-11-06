@@ -31,7 +31,7 @@ function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex gap-6 md:gap-8 py-16 md:py-20 lg:py-32 items-center justify-center flex-col">
           <div className="flex gap-3 md:gap-4 flex-col max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display mb-3 text-center">
+            <h2 className="text-2xl md:text-3xl mb-3 text-center">
               Hi, I'm <span className="text-primary font-bold">Niv</span>
             </h2>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl tracking-tight text-center font-display font-semibold leading-tight">
