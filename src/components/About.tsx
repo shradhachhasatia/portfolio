@@ -1,20 +1,9 @@
 import { Badge } from "@/components/ui/badge";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import profilePlaceholder from "@/assets/profile-placeholder.jpg";
-import { useEffect, useState } from "react";
 
 const About = () => {
-  const titles = ["Strategic", "Innovative", "Results-Driven", "Collaborative"];
-  const [titleNumber, setTitleNumber] = useState(0);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setTitleNumber((prev) => (prev >= titles.length - 1 ? 0 : prev + 1));
-    }, 2000);
-    return () => clearTimeout(timeoutId);
-  }, [titleNumber, titles.length]);
-
   const strengths = [
     "Strategic Planning",
     "Agile & Waterfall",
@@ -31,44 +20,22 @@ const About = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div 
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-12 md:mb-16 text-center"
           >
-            <h2 className="text-2xl md:text-3xl font-display mb-3">
-              Hi, I'm <span className="text-primary font-bold">Niv</span>
-            </h2>
-            <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold flex items-center justify-center gap-3 flex-wrap">
-              <span>Aspiring</span>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={titleNumber}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="text-primary"
-                >
-                  {titles[titleNumber]}
-                </motion.span>
-              </AnimatePresence>
-              <span>Project Manager</span>
-            </div>
-          </motion.div>
+            About Me
+          </motion.h2>
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="relative bg-card border border-border rounded-3xl p-6 md:p-10 lg:p-12 shadow-xl backdrop-blur-sm"
+            className="grid lg:grid-cols-[320px,1fr] gap-8 lg:gap-12 items-center"
           >
-            {/* Gradient accent border effect */}
-            <div className="absolute -inset-[1px] bg-gradient-to-r from-primary/20 via-primary/5 to-primary/20 rounded-3xl -z-10"></div>
-            
-            <div className="grid lg:grid-cols-[320px,1fr] gap-8 lg:gap-12 items-center">
               {/* Photo Section - Left Side */}
               <div className="flex justify-center lg:justify-start">
                 <div className="relative group">
@@ -89,11 +56,14 @@ const About = () => {
               {/* Content Section */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <p className="text-xl md:text-2xl font-display font-semibold leading-relaxed text-foreground">
-                    I help businesses deliver projects that matter.
+                  <p className="text-base md:text-lg leading-relaxed text-foreground/90">
+                    As an aspiring project manager, I bring a unique blend of <span className="font-semibold text-foreground">technical expertise</span> and <span className="font-semibold text-foreground">strategic thinking</span> to every initiative. My passion lies in transforming complex challenges into streamlined, efficient solutions that drive organizational success.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                    Dedicated to delivering exceptional results through strategic planning, effective communication, and meticulous attention to detail.
+                    With a foundation in project management methodologies and a commitment to continuous learning, I focus on delivering projects that not only meet objectives but exceed stakeholder expectations. My approach combines analytical rigor with creative problem-solving to navigate the complexities of modern project delivery.
+                  </p>
+                  <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+                    I believe in the power of <span className="text-foreground font-medium">collaboration</span>, <span className="text-foreground font-medium">clear communication</span>, and <span className="text-foreground font-medium">adaptive leadership</span> to build high-performing teams and deliver exceptional results.
                   </p>
                 </div>
 
@@ -116,12 +86,11 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </section>
+    );
 };
 
 export default About;

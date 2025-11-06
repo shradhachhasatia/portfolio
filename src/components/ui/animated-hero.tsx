@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["strategic", "innovative", "organized", "driven", "collaborative"],
+    () => ["Strategic", "Innovative", "Results-Driven", "Collaborative"],
     []
   );
 
@@ -31,14 +31,17 @@ function Hero() {
       <div className="container mx-auto px-4">
         <div className="flex gap-6 md:gap-8 py-16 md:py-20 lg:py-32 items-center justify-center flex-col">
           <div className="flex gap-3 md:gap-4 flex-col max-w-4xl">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl tracking-tight text-center font-display font-semibold leading-tight">
+            <h2 className="text-2xl md:text-3xl font-display mb-3 text-center">
+              Hi, I'm <span className="text-primary font-bold">Niv</span>
+            </h2>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl max-w-4xl tracking-tight text-center font-display font-semibold leading-tight">
               <span className="text-foreground">Aspiring</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center pb-2 pt-1 md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
                   <motion.span
                     key={index}
-                    className="absolute font-bold"
+                    className="absolute font-bold text-primary"
                     initial={{ opacity: 0, y: "-100" }}
                     transition={{ type: "spring", stiffness: 50 }}
                     animate={
@@ -58,8 +61,11 @@ function Hero() {
                 ))}
               </span>
               <span className="text-foreground">Project Manager</span>
-            </h2>
+            </h1>
 
+            <p className="text-xl md:text-2xl font-display font-semibold leading-relaxed text-foreground text-center mx-auto px-4 mt-4">
+              I help businesses deliver projects that matter.
+            </p>
             <p className="text-base md:text-lg lg:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center mx-auto font-light px-4">
               Dedicated to delivering exceptional results through strategic planning, 
               effective communication, and meticulous attention to detail.
