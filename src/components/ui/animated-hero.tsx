@@ -66,10 +66,6 @@ function Hero() {
             <p className="text-xl md:text-2xl font-display font-semibold leading-relaxed text-foreground text-center mx-auto px-4 mt-4">
               I help businesses deliver projects that matter.
             </p>
-            <p className="text-base md:text-lg lg:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center mx-auto font-light px-4">
-              Dedicated to delivering exceptional results through strategic planning, 
-              effective communication, and meticulous attention to detail.
-            </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto px-4">
             <Button 
