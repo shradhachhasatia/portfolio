@@ -1,9 +1,20 @@
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 import profilePlaceholder from "@/assets/profile-placeholder.jpg";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const titles = ["Strategic", "Innovative", "Results-Driven", "Collaborative"];
+  const [titleNumber, setTitleNumber] = useState(0);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setTitleNumber((prev) => (prev >= titles.length - 1 ? 0 : prev + 1));
+    }, 2000);
+    return () => clearTimeout(timeoutId);
+  }, [titleNumber, titles.length]);
+
   const strengths = [
     "Strategic Planning",
     "Agile & Waterfall",
@@ -20,14 +31,32 @@ const About = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.h2 
+          <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-12 md:mb-16 text-center"
+            className="text-center mb-12 md:mb-16"
           >
-            About Me
-          </motion.h2>
+            <h2 className="text-2xl md:text-3xl font-display mb-3">
+              Hi, I'm <span className="text-primary font-bold">Niv</span>
+            </h2>
+            <div className="text-3xl md:text-4xl lg:text-5xl font-display font-bold flex items-center justify-center gap-3 flex-wrap">
+              <span>Aspiring</span>
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={titleNumber}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-primary"
+                >
+                  {titles[titleNumber]}
+                </motion.span>
+              </AnimatePresence>
+              <span>Project Manager</span>
+            </div>
+          </motion.div>
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -43,8 +72,8 @@ const About = () => {
               {/* Photo Section - Left Side */}
               <div className="flex justify-center lg:justify-start">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-2xl blur-2xl group-hover:blur-3xl transition-all"></div>
-                  <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-2xl group-hover:blur-3xl transition-all"></div>
+                  <div className="relative w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
                     <img 
                       src={profilePlaceholder} 
                       alt="Professional profile showcasing project management expertise" 
@@ -60,14 +89,11 @@ const About = () => {
               {/* Content Section */}
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <p className="text-base md:text-lg leading-relaxed text-foreground/90">
-                    As an aspiring project manager, I bring a unique blend of <span className="font-semibold text-foreground">technical expertise</span> and <span className="font-semibold text-foreground">strategic thinking</span> to every initiative. My passion lies in transforming complex challenges into streamlined, efficient solutions that drive organizational success.
+                  <p className="text-xl md:text-2xl font-display font-semibold leading-relaxed text-foreground">
+                    I help businesses deliver projects that matter.
                   </p>
                   <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                    With a foundation in project management methodologies and a commitment to continuous learning, I focus on delivering projects that not only meet objectives but exceed stakeholder expectations. My approach combines analytical rigor with creative problem-solving to navigate the complexities of modern project delivery.
-                  </p>
-                  <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
-                    I believe in the power of <span className="text-foreground font-medium">collaboration</span>, <span className="text-foreground font-medium">clear communication</span>, and <span className="text-foreground font-medium">adaptive leadership</span> to build high-performing teams and deliver exceptional results.
+                    Dedicated to delivering exceptional results through strategic planning, effective communication, and meticulous attention to detail.
                   </p>
                 </div>
 
